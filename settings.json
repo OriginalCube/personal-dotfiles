@@ -3,6 +3,7 @@
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.productIconTheme": "icons-carbon",
+  "editor.lineNumbers": "relative",
 
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
@@ -29,20 +30,4 @@
   "prettier.requireConfig": true,
   "eslint.format.enable": true,
   "editor.inlineSuggest.suppressSuggestions": true,
-
-
-  "extension.recommendations": [
-    "antfu.icons-carbon",
-    "catppuccin.catppuccin-vsc",
-    "catppuccin.catppuccin-vsc-icons",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "ms-azuretools.vscode-docker",
-    "ms-vscode-remote.remote-containers",
-    "narasimapandiyan.jetbrainsmono",
-    "rvest.vs-code-prettier-eslint",
-    "sourcegraph.code-ai",
-    "vscodevim.vim",
-    "vue.volar@1.8.27"
-  ]
 }

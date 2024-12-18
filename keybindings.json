@@ -3,7 +3,8 @@
     {
         "key": "ctrl+shift+n",
         "command": "workbench.action.quickOpen",
-        "when": "editorTextFocus && vim.mode == 'Normal'"
+        "when": "(editorTextFocus && vim.mode == 'Normal') || focusedView =~ /^workbench\\.views\\./"
+
     },
     {
         "key": "alt+f",
@@ -17,10 +18,12 @@
         "key": "alt+1",
         "command": "workbench.action.toggleSidebarVisibility",
     },
+    // Terminal
     {
         "key": "alt+f12",
         "command": "workbench.action.terminal.toggleTerminal"
     },
+
     {
         "key": "ctrl+f",
         "command": "actions.find"

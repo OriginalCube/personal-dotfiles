@@ -27,7 +27,7 @@ A clean and productive VS Code setup optimized for modern web development.
 - Prettier requires config file
 
 ##  🔧 Preview 
-
+![image](https://github.com/user-attachments/assets/77041bfc-5803-4d84-9c25-918e6d39132a)
 
 ## 📦 Recommended Extensions
 - 🎨 `antfu.icons-carbon` - Carbon Icons

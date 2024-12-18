@@ -1,0 +1,48 @@
+{
+  // Theme
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.productIconTheme": "icons-carbon",
+
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "editor.stickyScroll.enabled": false,
+  "files.autoSaveWhenNoErrors": true,
+
+  // Fonts
+  "editor.fontSize": 18,
+  "editor.fontFamily": "JetBrains Mono NerdFont",
+  "editor.fontLigatures": false,
+  "editor.tabSize": 4,
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Use Prettier as the default formatter
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue" 
+  ],
+  "eslint.run": "onSave",
+  "prettier.requireConfig": true,
+  "eslint.format.enable": true,
+  "editor.inlineSuggest.suppressSuggestions": true,
+
+
+  "extension.recommendations": [
+    "antfu.icons-carbon",
+    "catppuccin.catppuccin-vsc",
+    "catppuccin.catppuccin-vsc-icons",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    "narasimapandiyan.jetbrainsmono",
+    "rvest.vs-code-prettier-eslint",
+    "sourcegraph.code-ai",
+    "vscodevim.vim",
+    "vue.volar@1.8.27"
+  ]
+}

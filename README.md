@@ -26,6 +26,9 @@ A clean and productive VS Code setup optimized for modern web development.
 - ESLint runs on save
 - Prettier requires config file
 
+##  🔧 Preview 
+
+
 ## 📦 Recommended Extensions
 - 🎨 `antfu.icons-carbon` - Carbon Icons
 - 🎯 `catppuccin.catppuccin-vsc` - Catppuccin Theme

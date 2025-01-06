@@ -3,7 +3,7 @@
 A clean and productive VS Code setup optimized for modern web development.
 
 ## 🎨 Theme & Appearance
-- **Color Theme**: Catppuccin Macchiato
+- **Color Theme**: Ayu Dark Borthered
 - **Icon Theme**: Catppuccin Macchiato Icons  
 - **Product Icons**: Carbon Icons
 - **Font**: JetBrains Mono NerdFont (Size: 18px)
@@ -13,7 +13,7 @@ A clean and productive VS Code setup optimized for modern web development.
 - Format on save enabled
 - Tab size: 4 spaces
 - Sticky scroll disabled
-- Font ligatures disabled
+- Font ligatures true
 
 ## 🔧 Code Formatting
 - Default formatter: Prettier
@@ -27,7 +27,8 @@ A clean and productive VS Code setup optimized for modern web development.
 - Prettier requires config file
 
 ##  🔧 Preview 
-![image](https://github.com/user-attachments/assets/77041bfc-5803-4d84-9c25-918e6d39132a)
+![image](https://github.com/user-attachments/assets/cafe8fe2-6f9b-4ede-aa3d-68763e9e2261)
+
 
 ## 📦 Recommended Extensions
 - 🎨 `antfu.icons-carbon` - Carbon Icons

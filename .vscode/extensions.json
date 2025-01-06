@@ -1,20 +1,27 @@
 {
-    "recommendations": [
+    "recommendations": 
+    [
         "antfu.icons-carbon",
+        "bradlc.vscode-tailwindcss",
         "catppuccin.catppuccin-vsc",
         "catppuccin.catppuccin-vsc-icons",
+        "csstools.postcss",
         "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
         "esbenp.prettier-vscode",
+        "istarwyh.writinghelper",
         "ms-azuretools.vscode-docker",
         "ms-vscode-remote.remote-containers",
-        "narasimapandiyan.jetbrainsmono",
+        "ms-vscode.extension-test-runner",
         "rvest.vs-code-prettier-eslint",
-        "sourcegraph.code-ai",
-        "vscodevim.vim",
-        "vue.volar@1.8.27",
-        "znck.grammarly",
-        "usernamehw.errorlens",
+        "sourcegraph.cody-ai",
         "streetsidesoftware.code-spell-checker",
-        "eamodio.gitlens"
+        "stylelint.vscode-stylelint",
+        "supermaven.supermaven",
+        "teabyii.ayu",
+        "vscodevim.vim",
+        "vue.volar",
+        "vue.vscode-typescript-vue-plugin",
+        "wakatime.vscode-wakatime"
     ]
 }

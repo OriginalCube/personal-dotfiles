@@ -1,20 +1,21 @@
 {
   // Theme
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Ayu Dark Bordered",
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.productIconTheme": "icons-carbon",
   "editor.lineNumbers": "relative",
 
   "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.stickyScroll.enabled": false,
   "files.autoSaveWhenNoErrors": true,
+  "window.titleBarStyle": "custom",
 
   // Fonts
   "editor.fontSize": 18,
   "editor.fontFamily": "JetBrains Mono NerdFont",
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
   "editor.tabSize": 4,
 
   // prettier & eslint

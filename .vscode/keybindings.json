@@ -7,26 +7,29 @@
     {
         "key": "ctrl+shift+n",
         "command": "workbench.action.quickOpen",
-        "when": "(editorTextFocus && vim.mode == 'Normal') || focusedView =~ /^workbench\\.views\\./"
+        "when": "true"
     },
     {
         "key": "alt+f",
         "command": "workbench.view.explorer",
+        "when": "true"
     },
     {
         "key": "alt+0",
         "command": "workbench.view.scm",
+        "when": "true"
     },
     {
         "key": "alt+1",
         "command": "workbench.action.toggleSidebarVisibility",
+        "when": "true"
     },
     // Terminal
     {
         "key": "alt+f12",
-        "command": "workbench.action.terminal.toggleTerminal"
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "true"
     },
-
     {
         "key": "ctrl+f",
         "command": "actions.find"
@@ -34,6 +37,10 @@
     {
         "key": "ctrl+f4",
         "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "alt+x",
+        "command": "workbench.action.closeActiveEditor",
     },
     {
         "key": "ctrl+shift+c",

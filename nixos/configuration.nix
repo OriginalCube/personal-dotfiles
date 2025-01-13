@@ -95,10 +95,6 @@
     ];
   };
 
-  # Enable programs
-  programs.firefox.enable = true;
-  programs.zsh.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -131,7 +127,17 @@
     papirus-icon-theme
     tmux
     lazygit
+    mariadb_114
+    mysql84
+    php84
+    php84Packages.composer
+    postgresql
+    electron
+    zsh-autosuggestions
   ];
+
+  # Enable programs
+  programs.firefox.enable = true;
 
   # on-start
   systemd.user.services.discord-on-startup = {
@@ -143,9 +149,18 @@
     };
   };
 
+  services.postgresql.enable = true;
+  services.mysql.enable = true;
+  services.mysql.package = pkgs.mariadb;
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    ohMyZsh.enable = true;
+    ohMyZsh.plugins = [ "git" ];
+    ohMyZsh.theme = "frisk";
+    syntaxHighlighting.enable = true;
+  };
 
-  # shell = pkgs.zsh;
-  # programs.zsh.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

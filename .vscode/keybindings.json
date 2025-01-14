@@ -24,6 +24,23 @@
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "true"
     },
+    {
+        "key": "ctrl+f4",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "alt+x",
+        "command": "workbench.action.closeActiveEditor",
+    },
+    {
+        "key": "ctrl+f",
+        "command": "actions.find"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "editor.action.clipboardCopyAction",
+        "when": "editorTextFocus && vim.active"
+    },
     // Terminal
     {
         "key": "alt+f12",
@@ -36,20 +53,23 @@
         "when": "true"
     },
     {
-        "key": "ctrl+f",
-        "command": "actions.find"
+        "key": "alt+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminal.active"
     },
     {
-        "key": "ctrl+f4",
-        "command": "workbench.action.closeActiveEditor"
+        "key": "alt+shift+t",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminal.active"
     },
     {
-        "key": "alt+x",
-        "command": "workbench.action.closeActiveEditor",
+        "key": "alt+shift+j",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminal.active"
     },
     {
-        "key": "ctrl+shift+c",
-        "command": "editor.action.clipboardCopyAction",
-        "when": "editorTextFocus && vim.active"
+        "key": "alt+shift+k",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminal.active"
     }
 ]

@@ -88,8 +88,8 @@
   users.users.ori = {
     isNormalUser = true;
     description = "ori";
-    extraGroups = [ "networkmanager" "wheel" "docker" "video" ];
     shell = pkgs.zsh;
+    extraGroups = [ "networkmanager" "wheel" "docker" "video" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -97,7 +97,6 @@
 
   # Enable programs
   programs.firefox.enable = true;
-  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -132,7 +131,15 @@
     tmux
     lazygit
     htop
+    electron
+    postman
+    mariadb_114
+    mysql84
+    php84
+    php84Packages.composer
     # To sync
+    xfce.thunar 
+    waybar
     htop
     grim 
     slurp 
@@ -162,6 +169,18 @@
     enable = true;
     wrapperFeatures.gtk = true;
   };
+
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
+
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
+  };
+
 
   # shell = pkgs.zsh;
   # programs.zsh.enable = true;

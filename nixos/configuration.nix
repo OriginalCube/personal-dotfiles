@@ -120,7 +120,7 @@
     swaylock
     wayland
     wayland-utils
-    wofi
+    rofi
     neovim
     pnpm
     whitesur-icon-theme
@@ -129,11 +129,13 @@
     lazygit
     mariadb_114
     mysql84
+    waybar
     php84
     php84Packages.composer
     postgresql
-    electron
     zsh-autosuggestions
+    # To be updated
+    postman
   ];
 
   # Enable programs
@@ -149,6 +151,15 @@
     };
   };
 
+  # Sway
+  services.gnome.gnome-keyring.enable = true;
+
+  # enable Sway window manager
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
+
   services.postgresql.enable = true;
   services.mysql.enable = true;
   services.mysql.package = pkgs.mariadb;
@@ -157,7 +168,7 @@
     enableAutosuggestions = true;
     ohMyZsh.enable = true;
     ohMyZsh.plugins = [ "git" ];
-    ohMyZsh.theme = "frisk";
+    ohMyZsh.theme = "awesomepanda";
     syntaxHighlighting.enable = true;
   };
 

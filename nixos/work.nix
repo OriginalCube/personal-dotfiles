@@ -112,6 +112,7 @@
     curl 
     nodejs
     yarn
+    # yarn-berry
     colima
     docker 
     docker-compose
@@ -133,19 +134,23 @@
     htop
     electron
     postman
-    mariadb_114
+    # mariadb_114
     mysql84
     php84
     php84Packages.composer
     # To sync
     xfce.thunar 
-    waybar
+    unzip
+    gimp
+    neofetch
+    ranger 
     htop
     grim 
     slurp 
     wl-clipboard 
     mako 
     rofi
+    bun
     # Work tools
     skypeforlinux
     viber
@@ -178,6 +183,9 @@
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
+    ohMyZsh.enable = true;
+    ohMyZsh.plugins = [ "git" ];
+    ohMyZsh.theme = "awesomepanda";
     syntaxHighlighting.enable = true;
   };
 

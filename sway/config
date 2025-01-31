@@ -13,13 +13,24 @@ set $term kitty
 set $menu rofi -show drun
 
 # Outputs modified
+output eDP-1 position 0 0
+output HDMI-A-1 position 1920 0
 workspace 1 output eDP-1
 
 ### Key bindings
 #
 # Basics:
 #
+    # Custom Background
+    exec swaybg -i ~/Pictures/wallpaper/main-bg-1.jpg -m fill
+
+    # Custom binds
+    bindsym $mod+Shift+x exec swaylock
+
     # Start a terminal
+    exec_always --no-startup-id grimshot init
+    exec discord    
+
     bindsym $mod+Return exec $term
 
     # Kill focused window
@@ -40,6 +51,10 @@ workspace 1 output eDP-1
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Screenshot tool
+    bindsym $mod+Shift+s exec IMG=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png && grim -g "$(slurp)" $IMG && wl-copy < $IMG
+
 #
 # Moving around:
 #
@@ -173,11 +188,10 @@ bindsym $mod+r mode "resize"
 bar {
     position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    font Jetbrains Mono 12
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    # Keep in mind that the current directory of this config file is $HOME
+    status_command while ~/.config/sway/status.sh; do sleep 1; done
 }
+
 
 # Read `man 5 sway-bar` for more information about this section.
 

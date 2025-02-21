@@ -71,5 +71,10 @@
         "key": "alt+shift+k",
         "command": "workbench.action.terminal.focusPrevious",
         "when": "terminal.active"
+    },
+    {
+        "key": "alt+shift+c", 
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "explorerViewletVisible"
     }
 ]

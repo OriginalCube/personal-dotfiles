@@ -76,5 +76,18 @@
         "key": "alt+shift+c", 
         "command": "workbench.files.action.collapseExplorerFolders",
         "when": "explorerViewletVisible"
+    },
+    {
+        "key": "alt+shift+g",
+        "command": "git.checkout"
+    },
+    {
+        "key": "alt+shift+p",
+        "command": "git.pull"
+    },
+    {
+        "key": "alt+shift+r",
+        "command": "workbench.action.openRecent",
+        "when": "true" 
     }
 ]

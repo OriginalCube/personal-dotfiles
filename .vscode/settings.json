@@ -1,7 +1,5 @@
 {
-  // Theme
-  "workbench.colorTheme": "Ayu Dark Bordered",
-  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.productIconTheme": "icons-carbon",
   "editor.lineNumbers": "relative",
 

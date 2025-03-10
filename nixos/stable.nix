@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
     ];
 
+  virtualisation.docker.enable = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -86,18 +87,11 @@
     curl 
     nodejs_22
     yarn-berry
-    discord
-    colima
-    docker 
-    docker-compose
-    google-chrome
-    vscode
     git
+    vscode
     sway
     swaybg
     swaylock
-    wayland
-    wayland-utils
     wofi
     neovim
     pnpm
@@ -110,30 +104,41 @@
     mysql84
     php84
     php84Packages.composer
+    docker
+
+    #---- Hyperland ----#
     hyprland
     waybar
     hyprpicker
     matugen
+    rofi
+    wayland
+    wayland-utils
+    hyprlock 
+    hyprshot
+    #-------------------#
+
+    #------ Apps  ------#
+    google-chrome
+    discord
     xfce.thunar 
     unzip
     gimp
     fastfetch
     ranger 
     htop
-    grim 
-    slurp 
-    wl-clipboard 
-    mako 
-    rofi
     bun
     xclip
     inkscape
+    obs-studio
+    #-------------------#
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     obsidian
     # Work tools
     skypeforlinux
     viber
   ];
+
   # on-start
   fonts.fontconfig.enable = true;
   systemd.user.services.discord-on-startup = {

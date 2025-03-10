@@ -1,4 +1,4 @@
-# project dirs
+# Custom Commands
 alias lg='lazygit'
 alias cstart='colima start'
 alias dkr='docker compose up --watch --build'

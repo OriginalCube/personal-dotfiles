@@ -1,0 +1,21 @@
+# project dirs
+alias lg='lazygit'
+alias cstart='colima start'
+alias dkr='docker compose up --watch --build'
+alias snre='sudo vim /etc/nixos/configuration.nix'
+alias snrr='sudo nixos-rebuild switch'
+alias hypres='pkill waybar & hyprctl reload' 
+
+# Settings
+# pnpm
+export PNPM_HOME="/home/ori/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+# Global
+export NPM_CONFIG_PREFIX=$HOME/.npm-global
+export PATH=$HOME/.npm-global/bin:$PATH
+
+

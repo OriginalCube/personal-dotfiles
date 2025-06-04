@@ -1,25 +1,16 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
+  virtualisation.docker.enable = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -31,15 +22,15 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "fil_PH";
-    LC_IDENTIFICATION = "fil_PH";
-    LC_MEASUREMENT = "fil_PH";
-    LC_MONETARY = "fil_PH";
-    LC_NAME = "fil_PH";
-    LC_NUMERIC = "fil_PH";
-    LC_PAPER = "fil_PH";
-    LC_TELEPHONE = "fil_PH";
-    LC_TIME = "fil_PH";
+    LC_ADDRESS = "en_PH.UTF-8";
+    LC_IDENTIFICATION = "en_PH.UTF-8";
+    LC_MEASUREMENT = "en_PH.UTF-8";
+    LC_MONETARY = "en_PH.UTF-8";
+    LC_NAME = "en_PH.UTF-8";
+    LC_NUMERIC = "en_PH.UTF-8";
+    LC_PAPER = "en_PH.UTF-8";
+    LC_TELEPHONE = "en_PH.UTF-8";
+    LC_TIME = "en_PH.UTF-8";
   };
 
   # Enable the GNOME Desktop Environment.
@@ -71,77 +62,97 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
-  # Docker
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ori = {
     isNormalUser = true;
     description = "ori";
-    extraGroups = [ "networkmanager" "wheel" "docker" "video" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "video" ];
+    packages = with pkgs; [];
   };
+
+  # Enable programs
+  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim 
     wget
-    discord
     zsh
     kitty
     curl 
-    nodejs
-    yarn
-    colima
-    docker 
-    docker-compose
-    google-chrome
-    vscode
+    nodejs_22
+    # yarn
+    yarn-berry
     git
+    vscode
     sway
     swaybg
     swaylock
-    wayland
-    wayland-utils
-    rofi
+    wofi
     neovim
     pnpm
     whitesur-icon-theme
     papirus-icon-theme
     tmux
     lazygit
-    mariadb_114
+    btop
+    postman
     mysql84
-    waybar
     php84
     php84Packages.composer
-    postgresql
-    zsh-autosuggestions
-    # To be updated
-    postman
+    docker
+    #---- Hyperland ----#
+    hyprland
+    waybar
+    hyprpicker
+    matugen
+    wofi
+    rofi
+    wayland
+    wayland-utils
+    hyprlock 
+    hyprshot
+    hypridle
+    wlogout
+    #-------------------#
+
+    #------ Apps  ------#
+    chromium
+    google-chrome
+    discord
+    xfce.thunar 
+    unzip
+    gimp
+    fastfetch
+    ranger 
+    htop
+    bun
+    xclip
+    inkscape
+    obs-studio
+    youtube-music 
+    spotify
+    brave
+    networkmanagerapplet
+    #-------------------#
+    (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
+    obsidian
+    # Work tools
+    skypeforlinux
+    viber
   ];
 
-  # Enable programs
-  programs.firefox.enable = true;
-
   # on-start
+  fonts.fontconfig.enable = true;
+  fonts.packages = with pkgs; [
+    fira-code
+    fira-code-symbols
+  ];
   systemd.user.services.discord-on-startup = {
   description = "Launch Discord on user login";
   wantedBy = [ "default.target" ];
@@ -150,6 +161,8 @@
       Restart = "always";
     };
   };
+
+  programs.hyprland.enable = true;
 
   # Sway
   services.gnome.gnome-keyring.enable = true;
@@ -160,9 +173,11 @@
     wrapperFeatures.gtk = true;
   };
 
-  services.postgresql.enable = true;
-  services.mysql.enable = true;
-  services.mysql.package = pkgs.mariadb;
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -173,26 +188,6 @@
   };
 
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-  # vritualisation.docker.enable = true;
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -202,3 +197,4 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
+

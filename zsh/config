@@ -5,6 +5,7 @@ alias dkr='docker compose up --watch --build'
 alias snre='sudo vim /etc/nixos/configuration.nix'
 alias snrr='sudo nixos-rebuild switch'
 alias hypres='pkill waybar & hyprctl reload' 
+alias faf='fastfetch' 
 
 # Settings
 # pnpm

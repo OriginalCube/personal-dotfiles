@@ -1,0 +1,13 @@
+#  ┳┳┓┏┓┏┳┓┳┳┏┓┏┓┳┓
+#  ┃┃┃┣┫ ┃ ┃┃┃┓┣ ┃┃
+#  ┛ ┗┛┗ ┻ ┗┛┗┛┗┛┛┗
+#                  
+
+# Global Configs
+[config]
+version_check = true
+
+[templates.waybar]
+input_path = '~/.local/personal-dotfiles/matugen/templates/waybar.css'
+output_path = '~/.local/personal-dotfiles/waybar/matugen/matugen-waybar.css'
+post_hook = 'pkill -SIGUSR2 waybar'

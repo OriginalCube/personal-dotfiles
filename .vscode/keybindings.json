@@ -89,5 +89,10 @@
         "key": "alt+shift+r",
         "command": "workbench.action.openRecent",
         "when": "true" 
+    },
+    {
+        "key": "alt+l",
+        "command": "github.copilot.chat.explain",
+        "when": "editorTextFocus" 
     }
 ]

@@ -1,6 +1,6 @@
 {
   "workbench.iconTheme": "vscode-icons",
-  "workbench.productIconTheme": "Default",
+  "workbench.editor.enablePreview": false,
   "editor.lineNumbers": "relative",
 
   "[vue]": {
@@ -12,7 +12,7 @@
 
   // Fonts
   "editor.fontSize": 18,
-  "editor.fontFamily": "JetBrains Mono NerdFont",
+  "editor.fontFamily": "JetBrainsMono NF Medium",
   "editor.fontLigatures": true,
   "editor.tabSize": 4,
 
@@ -33,4 +33,8 @@
   "prettier.requireConfig": true,
   "eslint.format.enable": true,
   "editor.inlineSuggest.suppressSuggestions": true,
+
+  // Extensions customize
+  "indentRainbow.indicatorStyle": "light",
+  "indentRainbow.lightIndicatorStyleLineWidth": 2,
 }

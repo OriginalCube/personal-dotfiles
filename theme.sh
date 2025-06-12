@@ -8,5 +8,6 @@ else
     exit 1
 fi
 
-matugen image "$HOME/.local/personal-dotfiles/images/wallpapers/$THEME.jpg"
+matugen image "$HOME/.local/personal-dotfiles/images/wallpapers/$THEME.jpg" --mode dark --contrast 1
 swww img "$HOME/.local/personal-dotfiles/images/wallpapers/$THEME.jpg" --transition-type center
+pkill waybar & hyprctl reload

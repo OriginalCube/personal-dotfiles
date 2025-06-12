@@ -50,6 +50,8 @@ window#waybar.hidden {
     color: @primary;
     padding: 0 20px 0 20px;
     margin-left: 8px;
+    background: url("/home/ori/.local/personal-dotfiles/images/mitzu.png") no-repeat center center;
+    background-size: contain;
 }
 
 #cpu {

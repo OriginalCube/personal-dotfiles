@@ -191,8 +191,9 @@
 	    "on-click": "wlogout"
     },
     "custom/launcher": {
-	    "format": "󰣇",
+	    "format": "&",
 	    "tooltip": false,
-	    "on-click": "~/.config/rofi/scripts/sidelauncher"
+	    "on-click": "~/.config/rofi/scripts/sidelauncher",
+		"interval": 1
     }
  }

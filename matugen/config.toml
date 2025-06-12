@@ -11,3 +11,7 @@ version_check = true
 input_path = '~/.local/personal-dotfiles/matugen/templates/waybar.css'
 output_path = '~/.local/personal-dotfiles/waybar/matugen/matugen-waybar.css'
 post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.kitty]
+input_path = '~/.local/personal-dotfiles/matugen/templates/kitty.css'
+output_path = '~/.local/personal-dotfiles/kitty/matugen/matugen-kitty.conf'

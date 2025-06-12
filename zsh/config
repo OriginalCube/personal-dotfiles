@@ -6,6 +6,7 @@ alias snre='sudo vim /etc/nixos/configuration.nix'
 alias snrr='sudo nixos-rebuild switch'
 alias hypres='pkill waybar & hyprctl reload' 
 alias faf='fastfetch' 
+alias ths='$HOME/.local/personal-dotfiles/theme.sh' 
 
 # Settings
 # pnpm

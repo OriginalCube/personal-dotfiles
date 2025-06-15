@@ -16,3 +16,6 @@ esac
 export NPM_CONFIG_PREFIX=$HOME/.npm-global
 export PATH=$HOME/.npm-global/bin:$PATH
 
+# Auto complete plugin
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
+
